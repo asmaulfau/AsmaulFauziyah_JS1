@@ -35,12 +35,9 @@ switch (hari) {
 }
 
 //for statement
-let harga = [10000, 20000, 30000, 40000, 50000];
-let total = 0;
-for (let i = 0; i < harga.length; i++) {
-  total += harga[i];
+for (let i = 1; i <= 5; i++) {
+  document.getElementById("forstatement").innerHTML += "Iterasi ke-" + i + "<br>";
 }
-document.getElementById("forstatement").innerHTML += "Total harga: " + total + "<br>";
 
 //while
 let waktuMundur = 10;
@@ -50,11 +47,13 @@ while (waktuMundur > 0) {
 }
 
 //do while
-let counterDo = 1;
+let countdown = 10;
+let output = "<h2>Hitung Mundur</h2>";
 do {
-  document.getElementById("dowhile").innerHTML += "Iterasi ke-" + counterDo + "<br>";
-  counterDo++;
-} while (counterDo <= 5);
+  output += countdown + "... ";
+  countdown--;
+} while (countdown >= 1);
+document.getElementById("dowhile").innerHTML = output + "Mulai!<br>";
 
 //function
 function tambahkan(a, b) {
